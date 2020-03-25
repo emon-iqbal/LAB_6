@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+	
+	<h2 id="abc" class="xyz"> NAME </h2>
+
+
+	<form>
+		<input id="name" type="text" name="" value="" onblur="f1()" /><br> <p id="msg"></p>
+		<input type="button" name="btn" value="Submit" onclick="f1()">
+	</form>
+
+	<script>
+		"use strict"
+
+		
+		function f1(){
+			var name = document.getElementById('name').value;
+			if(name == ""){
+				document.getElementById('msg').innerHTML = "null submission";
+			}else{
+				document.getElementById('msg').innerHTML = name;
+			}
+			
+		}
+	</script>
+</body>
+</html>

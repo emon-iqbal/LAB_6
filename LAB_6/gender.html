@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+	<form>
+	
+		<fieldset>
+			<legend><h2 id="abc" class="xyz">GENDER</h2></legend>
+				<input type="radio" name="gender" value="" onblur="f3()" required/>Male
+				<input type="radio" name="gender" value="" onblur="f3()" />Female 
+				<input type="radio" name="gender" value="" onblur="f3()" />Other		
+		</fieldset><br> <p id="msg"></p>
+		
+		<input type="button" name="btn" value="Submit" onclick="f3()">
+	
+	</form>
+
+	<script>
+		"use strict"
+
+		
+		function f3(){
+			var gender = document.getElementById('gender').value;
+			if(gender == ""){
+				document.getElementById('msg').innerHTML = "null submission";
+			}else{
+				document.getElementById('msg').innerHTML = gender;
+			}
+			
+		}
+	</script>
+</body>
+</html>

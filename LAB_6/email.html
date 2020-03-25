@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+	
+	<h2 id="abc" class="xyz"> EmaiL </h2>
+
+
+	<form>
+		<input id="email" type="email" name="" value="" onblur="f2()" /><br> <p id="msg"></p>
+		<input type="button" name="btn" value="Submit" onclick="f2()">
+	</form>
+
+	<script>
+		"use strict"
+
+		
+		function f2(){
+			var email = document.getElementById('email').value;
+			if(email == ""){
+				document.getElementById('msg').innerHTML = "null submission";
+			}else{
+				document.getElementById('msg').innerHTML = email;
+			}
+			
+		}
+	</script>
+</body>
+</html>
