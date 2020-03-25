@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JavaScript</title>
+	<title>JavaScript_GENDER</title>
 </head>
 <body>
-	<form>
+	<form name="gender" action="gender.html" method="post" onsubmit="return gender1();">
 	
 		<fieldset>
-			<legend><h2 id="abc" class="xyz">GENDER</h2></legend>
-				<input type="radio" name="gender" value="" onblur="f3()" required/>Male
-				<input type="radio" name="gender" value="" onblur="f3()" />Female 
-				<input type="radio" name="gender" value="" onblur="f3()" />Other		
-		</fieldset><br> <p id="msg"></p>
+			<legend><h2>GENDER</h2></legend>
+				<input type="radio" name="genderop" value="M"  /required>Male
+				<input type="radio" name="genderop" value="F" />Female 
+				<input type="radio" name="genderop" value="O" />Other		
+		</fieldset><br>
 		
-		<input type="button" name="btn" value="Submit" onclick="f3()">
+		<input type="submit" name="submit" value="SUBMIT" onclick="gender1()">
 	
 	</form>
-
+	<div id="gender"></div>
 	<script>
 		"use strict"
 
-		
-		function f3(){
-			var gender = document.getElementById('gender').value;
-			if(gender == ""){
-				document.getElementById('msg').innerHTML = "null submission";
-			}else{
-				document.getElementById('msg').innerHTML = gender;
+		function gender1(){
+			var valid=false;
+			var gender = document.gender.genderop;
+			
+			for(var g=0;g<gender.length;g++)
+			{
+				if(gender[g].checked)
+				{
+					valid=true;
+					break;
+				}
+			
+			}
+			
+			if(valid)
+			{
+				alert('GENDER IS SELECTED');
+			}
+			else
+			{
+				alert('NULL SUBMISSION');
+				return false;
 			}
 			
 		}
