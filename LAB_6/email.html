@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JavaScript</title>
+	<title>JScript_EMAIL</title>
 </head>
 <body>
 	
-	<h2 id="abc" class="xyz"> EmaiL </h2>
+	<h2> EMAiL </h2>
 
 
-	<form>
-		<input id="email" type="email" name="" value="" onblur="f2()" /><br> <p id="msg"></p>
-		<input type="button" name="btn" value="Submit" onclick="f2()">
+	<form action="email.html" method="post" onsubmit="return em1();">
+		<input type="email" name="email" id="email" /i><br> <p id="msg"></p>
+		<input type="submit" name="submit" value="SUBMIT" onclick="em1()">
 	</form>
 
+	<div id="email"></div>
+	
 	<script>
 		"use strict"
 
-		
-		function f2(){
+		function em1(){
 			var email = document.getElementById('email').value;
-			if(email == ""){
-				document.getElementById('msg').innerHTML = "null submission";
-			}else{
-				document.getElementById('msg').innerHTML = email;
+			if(email == "")
+			{
+				alert('null submission');
+				return false;
+			}
+			else
+			{
+				alert('EMAiL is submiTTEd');
+				return true;
 			}
 			
 		}
 	</script>
+	
 </body>
 </html>
