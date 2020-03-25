@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JavaScript</title>
+	<title>JSCRIPT_NAME</title>
 </head>
 <body>
 	
-	<h2 id="abc" class="xyz"> NAME </h2>
+	<h2> NAME </h2>
 
 
-	<form>
-		<input id="name" type="text" name="" value="" onblur="f1()" /><br> <p id="msg"></p>
-		<input type="button" name="btn" value="Submit" onclick="f1()">
+	<form action="nameCheck.html" method="post" onsubmit="return n1();">
+		<input type="text" name="name" id="name" /><br> <p id="msg"></p>
+		<input type="submit" name="submit" value="SUBMIT" onclick="n1()">
 	</form>
 
+	<div id="name"></div>
+	
 	<script>
 		"use strict"
 
-		
-		function f1(){
+		function n1(){
 			var name = document.getElementById('name').value;
-			if(name == ""){
-				document.getElementById('msg').innerHTML = "null submission";
-			}else{
+			if(name == "")
+			{
+				alert('null submission');
+				return false;
+			}
+			else if(name.length<3)
+			{
+				alert('Name must be at least 3 characters to be valid in this field');
+				return false;
+			}
+			else
+			{
 				document.getElementById('msg').innerHTML = name;
+				return true;
 			}
 			
 		}
 	</script>
+	
 </body>
 </html>
